@@ -61,15 +61,17 @@
     <Compile Include="Persistence\ApplicationDbContext.cs" />
     <Compile Include="Persistence\Configurations\DepartmentConfiguration.cs" />
     <Compile Include="Persistence\Configurations\EmployeeConfiguration.cs" />
+    <Compile Include="Persistence\Repositories\DepartmentRepository.cs" />
+    <Compile Include="Interfaces\IDepartmentRepository.cs" />
+    <Compile Include="Persistence\Repositories\EmployeeRepository.cs" />
+    <Compile Include="Interfaces\IEmployeeRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Interfaces\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="Persistence\Migrations\202209151740154_Initial.resx">
       <DependentUpon>202209151740154_Initial.cs</DependentUpon>
