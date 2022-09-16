@@ -30,7 +30,9 @@ namespace CleanArchitecture.DataAccess.Persistence.Repositories
                 throw new ArgumentNullException(nameof(id));
             }
 
-            return _context.Employees.Find(id);
+            return _context.Employees
+                .Include(e => e.Department)
+                .SingleOrDefault(e => e.ID == id);
         }
 
         public void Create(Employee employee)
