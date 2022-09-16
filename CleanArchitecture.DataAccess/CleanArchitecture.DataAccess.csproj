@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="Entities\Department.cs" />
     <Compile Include="Entities\Employee.cs" />
+    <Compile Include="Persistence\IUnitOfWork.cs" />
     <Compile Include="Persistence\Migrations\202209151740154_Initial.cs" />
     <Compile Include="Persistence\Migrations\202209151740154_Initial.designer.cs">
       <DependentUpon>202209151740154_Initial.cs</DependentUpon>
@@ -65,6 +66,7 @@
     <Compile Include="Interfaces\IDepartmentRepository.cs" />
     <Compile Include="Persistence\Repositories\EmployeeRepository.cs" />
     <Compile Include="Interfaces\IEmployeeRepository.cs" />
+    <Compile Include="Persistence\UnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
