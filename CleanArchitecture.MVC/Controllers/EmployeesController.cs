@@ -10,6 +10,7 @@ using CleanArchitecture.DataAccess.Entities;
 using CleanArchitecture.DataAccess.Interfaces;
 using CleanArchitecture.DataAccess.Persistence;
 using CleanArchitecture.MVC.ViewModels;
+using PagedList;
 
 namespace CleanArchitecture.MVC.Controllers
 {
@@ -27,6 +28,15 @@ namespace CleanArchitecture.MVC.Controllers
         {
             var employees = _unitOfWork.Employees.GetAll();
             return View(employees.ToList());
+        }
+
+        public ActionResult EmployeesWithPaging(int? page)
+        {
+            var employees = _unitOfWork.Employees.Get()
+                .OrderBy(e => e.ID)
+                .ToPagedList(page ?? 1, 3);
+
+            return View(employees);
         }
 
         // GET: Employees/Details/5
