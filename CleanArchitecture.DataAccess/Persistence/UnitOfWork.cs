@@ -14,12 +14,14 @@ namespace CleanArchitecture.DataAccess.Persistence
 
         public IDepartmentRepository Departments { get; private set; }
         public IEmployeeRepository Employees { get; private set; }
+        public IPostRepository Posts { get; private set; }
 
         public UnitOfWork(ApplicationDbContext context)
         {
             _context = context;
             Departments = new DepartmentRepository(_context);
             Employees = new EmployeeRepository(_context);
+            Posts = new PostRepository(_context);
         }
 
         public void Complete()

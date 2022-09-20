@@ -7,6 +7,7 @@ namespace CleanArchitecture.DataAccess.Interfaces
     {
         IDepartmentRepository Departments { get; }
         IEmployeeRepository Employees { get; }
+        IPostRepository Posts { get; }
 
         void Complete();
     }

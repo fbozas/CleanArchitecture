@@ -53,10 +53,17 @@
   <ItemGroup>
     <Compile Include="Entities\Department.cs" />
     <Compile Include="Entities\Employee.cs" />
+    <Compile Include="Entities\Post.cs" />
+    <Compile Include="Interfaces\IPostRepository.cs" />
+    <Compile Include="Persistence\Configurations\PostConfiguration.cs" />
     <Compile Include="Persistence\IUnitOfWork.cs" />
     <Compile Include="Persistence\Migrations\202209151740154_Initial.cs" />
     <Compile Include="Persistence\Migrations\202209151740154_Initial.designer.cs">
       <DependentUpon>202209151740154_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Persistence\Migrations\202209201520584_AddPostsToDb.cs" />
+    <Compile Include="Persistence\Migrations\202209201520584_AddPostsToDb.designer.cs">
+      <DependentUpon>202209201520584_AddPostsToDb.cs</DependentUpon>
     </Compile>
     <Compile Include="Persistence\Migrations\Configuration.cs" />
     <Compile Include="Persistence\ApplicationDbContext.cs" />
@@ -66,6 +73,7 @@
     <Compile Include="Interfaces\IDepartmentRepository.cs" />
     <Compile Include="Persistence\Repositories\EmployeeRepository.cs" />
     <Compile Include="Interfaces\IEmployeeRepository.cs" />
+    <Compile Include="Persistence\Repositories\PostRepository.cs" />
     <Compile Include="Persistence\UnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -77,6 +85,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Persistence\Migrations\202209151740154_Initial.resx">
       <DependentUpon>202209151740154_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Persistence\Migrations\202209201520584_AddPostsToDb.resx">
+      <DependentUpon>202209201520584_AddPostsToDb.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

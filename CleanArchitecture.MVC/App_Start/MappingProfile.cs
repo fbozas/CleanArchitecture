@@ -14,6 +14,9 @@ namespace CleanArchitecture.MVC.App_Start
         {
             Mapper.CreateMap<Employee, EmployeeDto>();
             Mapper.CreateMap<EmployeeDto, Employee>();
+
+            Mapper.CreateMap<Post, PostDto>();
+            Mapper.CreateMap<PostDto, Post>();
         }
     }
 }
